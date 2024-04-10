@@ -10,9 +10,11 @@ public class Aviao : MonoBehaviour {
         this.fisica = this.GetComponent<Rigidbody2D>();
     }
 
-    private void Update () { 
-        if(Input.GetButtonDown("Fire1"))
+    private void Update()
+    {
+        if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
         {
+            Debug.Log("cliquei");
             this.Impulsionar();
         }
     }
@@ -20,6 +22,6 @@ public class Aviao : MonoBehaviour {
 
     private void Impulsionar()
     {
-        this.fisica.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        this.fisica.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
     }
 }
