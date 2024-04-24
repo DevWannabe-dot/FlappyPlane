@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 0.05f;
+    [SerializeField]
+    private float velocidade = 0.5f;
     
+    private void Awake()
+    {
+        this.transform.Translate(Vector3.up * Random.Range(-1, 1));
+    }
     void Update()
     {
         // Translação para a esquerda
