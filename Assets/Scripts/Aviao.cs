@@ -15,7 +15,6 @@ public class Aviao : MonoBehaviour {
     {
         if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
         {
-            Debug.Log("cliquei");
             this.Impulsionar();
         }
     }
