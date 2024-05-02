@@ -22,7 +22,7 @@ public class Aviao : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump"))
         {
             this.Impulsionar();
         }
@@ -42,6 +42,7 @@ public class Aviao : MonoBehaviour {
 
     public void Reiniciar()
     {
-
+        this.transform.position = this.posicaoInicial;
+        this.fisica.simulated = true;
     }
 }
