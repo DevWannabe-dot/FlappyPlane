@@ -6,10 +6,17 @@ public class Aviao : MonoBehaviour {
     private Rigidbody2D fisica;
     [SerializeField] private float forca;
     private Diretor diretor;
+    private Vector3 posicaoInicial;
 
     private void Awake()
     {
+        this.posicaoInicial = this.transform.position;
         this.fisica = this.GetComponent<Rigidbody2D>();         // Coletar um componente dentro do próprio objeto
+    }
+
+    // Garante que a cena já foi criada
+    private void Start()
+    {
         this.diretor = GameObject.FindObjectOfType<Diretor>();  // Coletar um objeto o qual está em outro objeto
     }
 
@@ -30,6 +37,11 @@ public class Aviao : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D colisao){
         this.fisica.simulated = false;
-        this.diretor.finalizarJogo();
+        this.diretor.FinalizarJogo();
+    }
+
+    public void Reiniciar()
+    {
+
     }
 }
