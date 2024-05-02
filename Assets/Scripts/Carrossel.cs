@@ -17,6 +17,7 @@ public class Carrossel : MonoBehaviour
         float escala = this.transform.localScale.x;
         this.tamanhoRealDaImagem = tamanhoDaImagem * escala;
     }
+    
     void Update()
     {
         float deslocamento = Mathf.Repeat(this.velocidade * Time.time, this.tamanhoRealDaImagem);

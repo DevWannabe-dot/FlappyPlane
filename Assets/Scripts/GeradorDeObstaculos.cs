@@ -11,6 +11,7 @@ public class GeradorDeObstaculos : MonoBehaviour
     void Awake(){
         this.cronometro = this.tempoParaGerar;
     }
+    
     void Update()
     {
         this.cronometro -= Time.deltaTime;
