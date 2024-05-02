@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 5f;
+    private float velocidade = 5f;
     private float variacaoDaPosicaoY = 1f;
     
     private void Awake()
