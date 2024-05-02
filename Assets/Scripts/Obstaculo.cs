@@ -20,7 +20,6 @@ public class Obstaculo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D outro)
     {
-        Debug.Log("Colidiu.");
         this.Destruir();
     }
 
