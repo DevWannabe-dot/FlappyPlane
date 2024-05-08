@@ -18,11 +18,11 @@ public class Pontuacao : MonoBehaviour
         Debug.Log("fez");
         this.pontos++;
         this.Pontuacao_Texto.text = this.pontos.ToString();
+        this.audioPontuacao.Play();
     }
     public void Reiniciar()
     {
         this.pontos = 0;
         this.Pontuacao_Texto.text = this.pontos.ToString();
-        this.audioPontuacao.Play();
     }
 }
