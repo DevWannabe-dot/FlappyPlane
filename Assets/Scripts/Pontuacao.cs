@@ -7,7 +7,12 @@ public class Pontuacao : MonoBehaviour
 {
     [SerializeField] private Text Pontuacao_Texto;
     private int pontos;
+    private AudioSource audioPontuacao;
 
+    private void Awake()
+    {
+        this.audioPontuacao = this.GetComponent<AudioSource>();
+    }
     public void AdicionarPontos()
     {
         this.pontos++;
@@ -17,5 +22,6 @@ public class Pontuacao : MonoBehaviour
     {
         this.pontos = 0;
         this.Pontuacao_Texto.text = this.pontos.ToString();
+        this.audioPontuacao.Play();
     }
 }
