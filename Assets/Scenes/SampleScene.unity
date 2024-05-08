@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d34c6395b258a5bb7ef0d76cff6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pontuacao_Texto: {fileID: 0}
+  Pontuacao_Texto: {fileID: 1260107014}
 --- !u!1 &1972100268
 GameObject:
   m_ObjectHideFlags: 0

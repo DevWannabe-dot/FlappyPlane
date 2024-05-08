@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Pontuacao : MonoBehaviour
 {
-    [SerializeField] private Text Pontuacao_Texto;
+    [SerializeField] private TextMeshProUGUI Pontuacao_Texto;
     private int pontos;
     private AudioSource audioPontuacao;
 

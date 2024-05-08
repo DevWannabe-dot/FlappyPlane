@@ -8,7 +8,7 @@ public class Obstaculo : MonoBehaviour
     private float variacaoDaPosicaoY = 1f;
     private Vector3 posicaoDoAviao;
     private Pontuacao pontuacao;
-    private bool pontuei;
+    private bool pontuei = false;
     
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class Obstaculo : MonoBehaviour
     {
         this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
 
-        if(!this.pontuei && this.transform.position.x < this.posicaoDoAviao.x){
+        if(!(this.pontuei) && this.transform.position.x < this.posicaoDoAviao.x){
             this.pontuei = true;
             this.pontuacao.AdicionarPontos();
         }
