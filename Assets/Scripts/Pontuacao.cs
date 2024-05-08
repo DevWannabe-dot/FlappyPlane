@@ -15,6 +15,7 @@ public class Pontuacao : MonoBehaviour
     }
     public void AdicionarPontos()
     {
+        Debug.Log("fez");
         this.pontos++;
         this.Pontuacao_Texto.text = this.pontos.ToString();
     }
